@@ -1,0 +1,41 @@
+var_int = 10
+var_float = 8.4
+var_str = 'No'
+big_int = var_int * 3.5
+var_float -= 1
+var_int/var_float
+big_int/var_float
+var_str = var_str * 2 + 'Yes' * 3
+print('var_int = ' + str(var_int))
+print('big_int = ' + str(big_int))
+print('var_float = ' + str(var_float))
+print('var_str = ' + var_str)
+def revers1 (str_ec):
+    revers_sl = str_ec[::-1]
+    return revers_sl
+
+
+def revers2 (str_ec):
+    reverslist = list(str_ec)
+    revers_list = ''.join(reversed(reverslist))
+    return revers_list
+
+print(revers1('ecnalumba'))
+print(revers2('ecnalumba'))
+
+
+def reverse_row (str_row):
+    temp = ''
+    result = ''
+    for x in str_row:
+        if x != ' ':
+            temp += x
+        else:
+            result = temp + ' ' + result
+            temp = ''
+    result = temp + ' ' + result
+    return result
+
+print(reverse_row('one two three four'))
+
+
